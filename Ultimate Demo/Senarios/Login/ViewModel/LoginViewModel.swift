@@ -12,11 +12,14 @@ class LoginViewModel {
     private(set) var driverName: String = ""
     private(set) var driverNo: String = ""
     private var password: String = ""
+    
     var isLoading: Observable<Bool> = Observable(false)
     
+    /// Login
+    /// - Parameter completion: Error if available
     func login(completion: @escaping (_ error: String?) -> Void) {
         isLoading.value = true
-        APICaller.perfromLogin(deleveryNo: driverNo, password: password) { [weak self] result in
+        APICaller.perfromLogin(driverId: driverNo, password: password) { [weak self] result in
             self?.isLoading.value = false
             DispatchQueue.main.async {
                 switch result {

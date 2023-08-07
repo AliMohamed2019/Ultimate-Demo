@@ -35,6 +35,9 @@ class HomeOrderTableViewCell: UITableViewCell {
         containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
     
+    
+    /// Set Cell Order From DeliveryOrderViewModel
+    /// - Parameter order: Deliver Order ViewModel
     func setCellOrder(order: DeliveryOrderViewModel) {
         // Set order data
         orderNumberLabel.text = order.billNo

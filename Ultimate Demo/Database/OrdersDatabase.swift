@@ -25,6 +25,7 @@ class OrdersDatabase {
         createDatabase()
     }
     
+    /// Create The Database Connection
     private func createDatabase() {
         do {
             let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -37,6 +38,7 @@ class OrdersDatabase {
         }
     }
     
+    /// Create Orders Table If Not Available
     private func createTable() {
         do {
             try database.run(ordersTable.create(ifNotExists: true) { table in
@@ -53,6 +55,8 @@ class OrdersDatabase {
         }
     }
     
+    /// Indset New Orders To Table
+    /// - Parameter orders: Deliver Bill Items From API
     func insertOrders(orders: [DeliveryBill]) {
         do {
             try database.transaction {
@@ -74,6 +78,9 @@ class OrdersDatabase {
         }
     }
     
+    /// Filter Database Orders For The DeliverStatusFlag
+    /// - Parameter isNew: Status eather New or Other
+    /// - Returns: Filtered Array Of DeliveryOrderViewModel
     func filterOrder(isNew: Bool) -> [DeliveryOrderViewModel] {
         var results: [DeliveryOrderViewModel] = []
         let newStatusFlag = "0"

@@ -9,6 +9,7 @@ import Foundation
 import SQLite
 
 struct DeliveryOrderViewModel {
+    
     let billSrl: String
     let billNo: String
     let billTotal: String
@@ -47,6 +48,7 @@ struct DeliveryOrderViewModel {
         
     }
     
+    /// Order Status Types Enum with Title And Color For Each Case
     enum OrderStatusType {
         case new
         case delivered

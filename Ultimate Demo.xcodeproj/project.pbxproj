@@ -13,6 +13,9 @@
 		AD3351872A808E2300439347 /* HomeViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3351862A808E2300439347 /* HomeViewController + Extensions.swift */; };
 		AD33518A2A808EC200439347 /* HomeOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3351882A808EC200439347 /* HomeOrderTableViewCell.swift */; };
 		AD33518B2A808EC200439347 /* HomeOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3351892A808EC200439347 /* HomeOrderTableViewCell.xib */; };
+		ADBD763F2A81A257006ADECA /* DeliveryBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD763E2A81A257006ADECA /* DeliveryBill.swift */; };
+		ADBD76422A81A4D8006ADECA /* IdleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD76412A81A4D8006ADECA /* IdleTimer.swift */; };
+		ADBD76442A81B0D3006ADECA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD76432A81B0D3006ADECA /* UIView.swift */; };
 		ADCC08172A8118D000E90F6D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC08162A8118D000E90F6D /* LoginViewModel.swift */; };
 		ADCC081A2A8125AD00E90F6D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC08192A8125AD00E90F6D /* NetworkLayer.swift */; };
 		ADCC081C2A8125F200E90F6D /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC081B2A8125F200E90F6D /* NetworkLayerProtocol.swift */; };
@@ -45,6 +48,9 @@
 		AD3351862A808E2300439347 /* HomeViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Extensions.swift"; sourceTree = "<group>"; };
 		AD3351882A808EC200439347 /* HomeOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrderTableViewCell.swift; sourceTree = "<group>"; };
 		AD3351892A808EC200439347 /* HomeOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOrderTableViewCell.xib; sourceTree = "<group>"; };
+		ADBD763E2A81A257006ADECA /* DeliveryBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBill.swift; sourceTree = "<group>"; };
+		ADBD76412A81A4D8006ADECA /* IdleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimer.swift; sourceTree = "<group>"; };
+		ADBD76432A81B0D3006ADECA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		ADCC08162A8118D000E90F6D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ADCC08192A8125AD00E90F6D /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		ADCC081B2A8125F200E90F6D /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerProtocol.swift; sourceTree = "<group>"; };
@@ -111,8 +117,17 @@
 			children = (
 				AD3351842A808C3900439347 /* UIColor.swift */,
 				ADCC08252A81399E00E90F6D /* UIViewController.swift */,
+				ADBD76432A81B0D3006ADECA /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADBD76402A81A4CC006ADECA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ADBD76412A81A4D8006ADECA /* IdleTimer.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		ADCC08142A8118BE00E90F6D /* ViewModel */ = {
@@ -145,6 +160,7 @@
 		ADCC08272A813B4B00E90F6D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AD28E5982A81677700B76DC9 /* DeliveryBillItemViewModel.swift */,
 				ADCC08282A813B5300E90F6D /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -154,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				ADCC082B2A814FE900E90F6D /* DeliveryBillItemsResponse.swift */,
-				AD28E5982A81677700B76DC9 /* DeliveryBillItemViewModel.swift */,
+				ADBD763E2A81A257006ADECA /* DeliveryBill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,10 +204,11 @@
 		ADFB54DC2A8068A800165303 /* Ultimate Demo */ = {
 			isa = PBXGroup;
 			children = (
-				ADCC082D2A815D2300E90F6D /* Database */,
+				ADBD76402A81A4CC006ADECA /* Helpers */,
 				ADCC08182A81259F00E90F6D /* NetworkLayer */,
 				AD3351832A808C2C00439347 /* Extensions */,
 				AD33517F2A80887F00439347 /* Cusom Views */,
+				ADCC082D2A815D2300E90F6D /* Database */,
 				ADFB54F12A8072B600165303 /* Senarios */,
 				ADFB54FA2A8076BA00165303 /* Resources */,
 				ADFB54EB2A8068AA00165303 /* Info.plist */,
@@ -377,12 +394,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBD763F2A81A257006ADECA /* DeliveryBill.swift in Sources */,
 				ADCC08292A813B5300E90F6D /* HomeViewModel.swift in Sources */,
 				ADCC081E2A8129DE00E90F6D /* NetworkConstants.swift in Sources */,
 				ADCC08242A81383F00E90F6D /* Observable.swift in Sources */,
 				ADCC08222A81332300E90F6D /* LoginModel.swift in Sources */,
 				AD28E5992A81677700B76DC9 /* DeliveryBillItemViewModel.swift in Sources */,
 				ADCC082F2A815D3300E90F6D /* OrdersDatabase.swift in Sources */,
+				ADBD76442A81B0D3006ADECA /* UIView.swift in Sources */,
 				AD3351872A808E2300439347 /* HomeViewController + Extensions.swift in Sources */,
 				ADCC08202A812D4E00E90F6D /* APICaller.swift in Sources */,
 				ADCC082C2A814FE900E90F6D /* DeliveryBillItemsResponse.swift in Sources */,
@@ -393,6 +412,7 @@
 				ADFB54E02A8068A800165303 /* SceneDelegate.swift in Sources */,
 				ADCC081C2A8125F200E90F6D /* NetworkLayerProtocol.swift in Sources */,
 				ADFB54FF2A807E2400165303 /* HomeViewController.swift in Sources */,
+				ADBD76422A81A4D8006ADECA /* IdleTimer.swift in Sources */,
 				AD33518A2A808EC200439347 /* HomeOrderTableViewCell.swift in Sources */,
 				ADCC081A2A8125AD00E90F6D /* NetworkLayer.swift in Sources */,
 				ADCC08262A81399E00E90F6D /* UIViewController.swift in Sources */,

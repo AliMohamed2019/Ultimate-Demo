@@ -36,6 +36,13 @@ class HomeViewController: UIViewController {
         configureTableView()
         getOrders()
         observeIsLoading()
+        addTapGestureRecognizer()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Start New Idle Timer
+        IdleTimer.shared.startTimer()
     }
     
     // MARK: - IBActions
@@ -91,19 +98,30 @@ class HomeViewController: UIViewController {
         }
     }
     
+    /// Reload Tableview and Data With Animation
     func reloadTableViewData() {
+        // Remove Empty Message if Exists
+        ordersTableView.removeEmptyMessage()
+        
         // View Model Filter Orders
         viewModel.filterDatabaseOrders()
         
         // Animate the view to disappear and reappear
         UIView.animate(withDuration: 0.25, delay: .zero, options: .curveEaseIn) { [weak self] in
             self?.ordersTableView.alpha = 0.0
+            
         } completion: { [weak self] _ in
             self?.ordersTableView.reloadData()
             UIView.animate(withDuration: 0.25, delay: .zero, options: .curveEaseOut) {
                 self?.ordersTableView.alpha = 1.0
+                
+                // Show Empty Message If No Orders
+                if self?.viewModel.cellCount == 0 {
+                    self?.ordersTableView.showEmptyMessage(message: "No Orders Available!")
+                }
             }
         }
         
     }
+    
 }

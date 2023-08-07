@@ -31,7 +31,7 @@ class HomeViewModel {
     /// - Parameter completion: Completions With String Error
     func fetchOrders(completion: @escaping (_ error: String?) -> Void) {
         isLoading.value = true
-        APICaller.fetchOrders(deleveryNo: deliveryNo) { [weak self] result in
+        APICaller.fetchOrders(driverId: deliveryNo) { [weak self] result in
             self?.isLoading.value = false
             DispatchQueue.main.async {
                 switch result {

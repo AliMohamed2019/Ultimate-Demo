@@ -11,7 +11,7 @@ class RoundedSegmentedControl: UISegmentedControl {
     
     private lazy var radius: CGFloat = bounds.height/2
     
-    /// Configure selected segment inset, can't be zero or size will error when click segment
+    // Configure selected segment inset, can't be zero or size will error when click segment
     private var segmentInset: CGFloat = 0.1 {
         didSet {
             if segmentInset == 0 {

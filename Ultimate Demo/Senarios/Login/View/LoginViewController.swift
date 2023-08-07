@@ -55,14 +55,7 @@ class LoginViewController: UIViewController {
         passwordTF.delegate = self
     }
     
-    private func showHomeVC() {
-        let homeViewModel = HomeViewModel(deliveryNo: viewModel.driverNo, deliveryName: viewModel.driverName)
-        let homeVC = HomeViewController(viewModel: homeViewModel)
-        let homeNav = UINavigationController(rootViewController: homeVC)
-        homeNav.modalPresentationStyle = .fullScreen
-        present(homeNav, animated: true)
-    }
-    
+    /// Perfrom Login
     private func login() {
         viewModel.login { [weak self] error in
             if let error = error {
@@ -73,6 +66,17 @@ class LoginViewController: UIViewController {
         }
     }
     
+    /// Create and Present Homew ViewController
+    private func showHomeVC() {
+        let homeViewModel = HomeViewModel(deliveryNo: viewModel.driverNo, deliveryName: viewModel.driverName)
+        let homeVC = HomeViewController(viewModel: homeViewModel)
+        let homeNav = UINavigationController(rootViewController: homeVC)
+        homeNav.modalPresentationStyle = .fullScreen
+        present(homeNav, animated: true)
+    }
+    
+    
+    /// Observe view model isLoading
     private func observeIsLoading() {
         viewModel.isLoading.bind { [unowned self] isLoading in
             if isLoading {
