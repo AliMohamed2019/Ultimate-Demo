@@ -71,6 +71,9 @@
                                         <segment title="Others"/>
                                     </segments>
                                     <color key="selectedSegmentTintColor" name="CustomDarkBlue"/>
+                                    <connections>
+                                        <action selector="segmentedControllChanged:" destination="-1" eventType="valueChanged" id="ftL-sA-STn"/>
+                                    </connections>
                                 </segmentedControl>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

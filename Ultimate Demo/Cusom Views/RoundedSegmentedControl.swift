@@ -41,7 +41,7 @@ class RoundedSegmentedControl: UISegmentedControl {
         
         // Configure Text Attributes
         self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
-        self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+        self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.customDarkBlue], for: .normal)
         
         // Find selectedImageView
         let selectedImageViewIndex = numberOfSegments

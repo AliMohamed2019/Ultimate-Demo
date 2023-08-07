@@ -9,7 +9,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    init() {
+    let viewModel: HomeViewModel
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: "HomeViewController", bundle: nil)
     }
     
@@ -32,13 +34,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         configureTableView()
+        getOrders()
+        observeIsLoading()
     }
     
     // MARK: - IBActions
-    
+    @IBAction func segmentedControllChanged(_ sender: UISegmentedControl) {
+        viewModel.setSelectedSegment(index: sender.selectedSegmentIndex)
+        reloadTableViewData()
+    }
     
     // MARK: - Methods
-    func setupUI() {
+    private func setupUI() {
         // Header View Corner Raius
         headerContainrView.layer.cornerRadius = 16
         headerContainrView.layer.maskedCorners = [.layerMinXMaxYCorner]
@@ -49,13 +56,54 @@ class HomeViewController: UIViewController {
         segmentedControlContainrView.layer.shadowColor = UIColor.customGray.cgColor
         segmentedControlContainrView.layer.shadowOpacity = 0.4
         segmentedControlContainrView.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        // Set User Name
+        userNameLabel.text = viewModel.deliveryName
     }
     
-    func configureTableView() {
+    /// Register Table View Cell and assign delegate and data source
+    private func configureTableView() {
         ordersTableView.delegate = self
         ordersTableView.dataSource = self
-        
         ordersTableView.register(UINib(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
+        ordersTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 50, right: 0)
     }
     
+    /// ViewModel fetch orders
+    private func getOrders() {
+        viewModel.fetchOrders { [weak self] error in
+            if let error = error {
+                print(error)
+                return
+            }
+            self?.reloadTableViewData()
+        }
+    }
+    
+    /// Observe when view model is loading to show or hide activity indicator
+    private func observeIsLoading() {
+        viewModel.isLoading.bind { [unowned self] isLoading in
+            if isLoading {
+                startLoading()
+            } else {
+                stopLoading()
+            }
+        }
+    }
+    
+    func reloadTableViewData() {
+        // View Model Filter Orders
+        viewModel.filterDatabaseOrders()
+        
+        // Animate the view to disappear and reappear
+        UIView.animate(withDuration: 0.25, delay: .zero, options: .curveEaseIn) { [weak self] in
+            self?.ordersTableView.alpha = 0.0
+        } completion: { [weak self] _ in
+            self?.ordersTableView.reloadData()
+            UIView.animate(withDuration: 0.25, delay: .zero, options: .curveEaseOut) {
+                self?.ordersTableView.alpha = 1.0
+            }
+        }
+        
+    }
 }

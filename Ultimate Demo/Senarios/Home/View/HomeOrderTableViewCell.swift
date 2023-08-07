@@ -34,5 +34,18 @@ class HomeOrderTableViewCell: UITableViewCell {
         containerView.layer.shadowOpacity = 0.8
         containerView.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
+    
+    func setCellOrder(order: DeliveryOrderViewModel) {
+        // Set order data
+        orderNumberLabel.text = order.billNo
+        statusLabel.text = order.statusType.title
+        priceLabel.text = order.billTotal
+        dateLabel.text = order.billDate
+        
+        // Set order status
+        let statusColor = order.statusType.color
+        statusLabel.textColor = statusColor
+        statusColorView.backgroundColor = statusColor
+    }
 
 }

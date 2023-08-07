@@ -9,11 +9,14 @@ import UIKit
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return viewModel.cellCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeOrderTableViewCell", for: indexPath) as! HomeOrderTableViewCell
+        
+        let order = viewModel.orderForCell(at: indexPath)
+        cell.setCellOrder(order: order)
         
         return cell
     }
