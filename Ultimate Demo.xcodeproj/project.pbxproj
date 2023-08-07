@@ -16,6 +16,7 @@
 		ADBD763F2A81A257006ADECA /* DeliveryBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD763E2A81A257006ADECA /* DeliveryBill.swift */; };
 		ADBD76422A81A4D8006ADECA /* IdleTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD76412A81A4D8006ADECA /* IdleTimer.swift */; };
 		ADBD76442A81B0D3006ADECA /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD76432A81B0D3006ADECA /* UIView.swift */; };
+		ADBD76462A81B8F8006ADECA /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBD76452A81B8F8006ADECA /* Alert.swift */; };
 		ADCC08172A8118D000E90F6D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC08162A8118D000E90F6D /* LoginViewModel.swift */; };
 		ADCC081A2A8125AD00E90F6D /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC08192A8125AD00E90F6D /* NetworkLayer.swift */; };
 		ADCC081C2A8125F200E90F6D /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC081B2A8125F200E90F6D /* NetworkLayerProtocol.swift */; };
@@ -51,6 +52,7 @@
 		ADBD763E2A81A257006ADECA /* DeliveryBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBill.swift; sourceTree = "<group>"; };
 		ADBD76412A81A4D8006ADECA /* IdleTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimer.swift; sourceTree = "<group>"; };
 		ADBD76432A81B0D3006ADECA /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		ADBD76452A81B8F8006ADECA /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		ADCC08162A8118D000E90F6D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ADCC08192A8125AD00E90F6D /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		ADCC081B2A8125F200E90F6D /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerProtocol.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				ADBD76412A81A4D8006ADECA /* IdleTimer.swift */,
+				ADBD76452A81B8F8006ADECA /* Alert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				ADCC08242A81383F00E90F6D /* Observable.swift in Sources */,
 				ADCC08222A81332300E90F6D /* LoginModel.swift in Sources */,
 				AD28E5992A81677700B76DC9 /* DeliveryBillItemViewModel.swift in Sources */,
+				ADBD76462A81B8F8006ADECA /* Alert.swift in Sources */,
 				ADCC082F2A815D3300E90F6D /* OrdersDatabase.swift in Sources */,
 				ADBD76442A81B0D3006ADECA /* UIView.swift in Sources */,
 				AD3351872A808E2300439347 /* HomeViewController + Extensions.swift in Sources */,

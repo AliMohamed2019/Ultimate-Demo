@@ -58,11 +58,12 @@ class LoginViewController: UIViewController {
     /// Perfrom Login
     private func login() {
         viewModel.login { [weak self] error in
+            guard let self = self else { return }
             if let error = error {
-                print(error)
+                Alert.show(message: error, context: self)
                 return
             }
-            self?.showHomeVC()
+            self.showHomeVC()
         }
     }
     
