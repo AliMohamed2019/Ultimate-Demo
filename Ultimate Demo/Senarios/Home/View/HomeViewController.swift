@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var ordersTableView: UITableView!
     
     // MARK: - Variables
-    private let cellId = "HomeOrderTableViewCell"
+    private let cellId = "HomeOrderTableViewCell" 
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
