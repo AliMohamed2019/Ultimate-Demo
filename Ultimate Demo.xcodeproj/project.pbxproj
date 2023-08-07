@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD3351812A80889200439347 /* RoundedSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3351802A80889200439347 /* RoundedSegmentedControl.swift */; };
+		AD3351852A808C3900439347 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3351842A808C3900439347 /* UIColor.swift */; };
+		AD3351872A808E2300439347 /* HomeViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3351862A808E2300439347 /* HomeViewController + Extensions.swift */; };
+		AD33518A2A808EC200439347 /* HomeOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3351882A808EC200439347 /* HomeOrderTableViewCell.swift */; };
+		AD33518B2A808EC200439347 /* HomeOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD3351892A808EC200439347 /* HomeOrderTableViewCell.xib */; };
 		ADFB54DE2A8068A800165303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB54DD2A8068A800165303 /* AppDelegate.swift */; };
 		ADFB54E02A8068A800165303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB54DF2A8068A800165303 /* SceneDelegate.swift */; };
 		ADFB54E72A8068AA00165303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFB54E62A8068AA00165303 /* Assets.xcassets */; };
 		ADFB54EA2A8068AA00165303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFB54E82A8068AA00165303 /* LaunchScreen.storyboard */; };
 		ADFB54F62A8072D300165303 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB54F42A8072D300165303 /* LoginViewController.swift */; };
 		ADFB54F72A8072D300165303 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFB54F52A8072D300165303 /* LoginViewController.xib */; };
+		ADFB54FF2A807E2400165303 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFB54FD2A807E2400165303 /* HomeViewController.swift */; };
+		ADFB55002A807E2400165303 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADFB54FE2A807E2400165303 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD3351802A80889200439347 /* RoundedSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSegmentedControl.swift; sourceTree = "<group>"; };
+		AD3351842A808C3900439347 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		AD3351862A808E2300439347 /* HomeViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Extensions.swift"; sourceTree = "<group>"; };
+		AD3351882A808EC200439347 /* HomeOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrderTableViewCell.swift; sourceTree = "<group>"; };
+		AD3351892A808EC200439347 /* HomeOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeOrderTableViewCell.xib; sourceTree = "<group>"; };
 		ADFB54DA2A8068A800165303 /* Ultimate Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFB54DD2A8068A800165303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADFB54DF2A8068A800165303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +36,8 @@
 		ADFB54EB2A8068AA00165303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADFB54F42A8072D300165303 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ADFB54F52A8072D300165303 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		ADFB54FD2A807E2400165303 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ADFB54FE2A807E2400165303 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD33517F2A80887F00439347 /* Cusom Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD3351802A80889200439347 /* RoundedSegmentedControl.swift */,
+			);
+			path = "Cusom Views";
+			sourceTree = "<group>";
+		};
+		AD3351832A808C2C00439347 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD3351842A808C3900439347 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ADFB54D12A8068A800165303 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +86,8 @@
 		ADFB54DC2A8068A800165303 /* Ultimate Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AD3351832A808C2C00439347 /* Extensions */,
+				AD33517F2A80887F00439347 /* Cusom Views */,
 				ADFB54F12A8072B600165303 /* Senarios */,
 				ADFB54FA2A8076BA00165303 /* Resources */,
 				ADFB54EB2A8068AA00165303 /* Info.plist */,
@@ -67,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				ADFB54F22A8072C200165303 /* Login */,
+				ADFB54FB2A807E0B00165303 /* Home */,
 			);
 			path = Senarios;
 			sourceTree = "<group>";
@@ -97,6 +130,26 @@
 				ADFB54E82A8068AA00165303 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADFB54FB2A807E0B00165303 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ADFB54FC2A807E1200165303 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ADFB54FC2A807E1200165303 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADFB54FD2A807E2400165303 /* HomeViewController.swift */,
+				AD3351862A808E2300439347 /* HomeViewController + Extensions.swift */,
+				ADFB54FE2A807E2400165303 /* HomeViewController.xib */,
+				AD3351882A808EC200439347 /* HomeOrderTableViewCell.swift */,
+				AD3351892A808EC200439347 /* HomeOrderTableViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD33518B2A808EC200439347 /* HomeOrderTableViewCell.xib in Resources */,
 				ADFB54EA2A8068AA00165303 /* LaunchScreen.storyboard in Resources */,
 				ADFB54E72A8068AA00165303 /* Assets.xcassets in Resources */,
 				ADFB54F72A8072D300165303 /* LoginViewController.xib in Resources */,
+				ADFB55002A807E2400165303 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +225,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3351872A808E2300439347 /* HomeViewController + Extensions.swift in Sources */,
 				ADFB54F62A8072D300165303 /* LoginViewController.swift in Sources */,
+				AD3351852A808C3900439347 /* UIColor.swift in Sources */,
+				AD3351812A80889200439347 /* RoundedSegmentedControl.swift in Sources */,
 				ADFB54DE2A8068A800165303 /* AppDelegate.swift in Sources */,
 				ADFB54E02A8068A800165303 /* SceneDelegate.swift in Sources */,
+				ADFB54FF2A807E2400165303 /* HomeViewController.swift in Sources */,
+				AD33518A2A808EC200439347 /* HomeOrderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,15 +369,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ultimate Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Onyx Restaurant Delivery";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,15 +405,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ultimate Demo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Onyx Restaurant Delivery";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

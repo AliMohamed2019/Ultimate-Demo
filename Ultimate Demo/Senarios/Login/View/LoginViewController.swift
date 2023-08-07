@@ -17,21 +17,41 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var userIdTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // MARK: - Variables
+    
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
+    // MARK: - IBActions
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        let homeVC = HomeViewController()
+        let homeNav = UINavigationController(rootViewController: homeVC)
+        homeNav.modalPresentationStyle = .fullScreen
+        present(homeNav, animated: true)
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Methods
+    func setupUI() {
+        // Round Corner Radius
+        userIdTF.layer.cornerRadius = userIdTF.frame.size.height/2
+        passwordTF.layer.cornerRadius = passwordTF.frame.size.height/2
+        loginButton.layer.cornerRadius = loginButton.frame.size.height/2
+        
+        // Change TextFields Placeholder Color
+        userIdTF.attributedPlaceholder = NSAttributedString(string: "User ID",
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        passwordTF.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                              attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+    }
     
 }

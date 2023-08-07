@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Ultimate_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="headerContainrView" destination="ZaS-YW-rhg" id="mml-2E-vrh"/>
+                <outlet property="ordersTableView" destination="iWI-26-0K0" id="L0j-hL-GC8"/>
+                <outlet property="segmentedControl" destination="UED-I5-WS1" id="Bkq-UV-gBV"/>
+                <outlet property="segmentedControlContainrView" destination="DTH-gV-ide" id="zUg-Fn-qAQ"/>
+                <outlet property="userNameLabel" destination="QtT-7R-QhF" id="9Mf-1v-Bcp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRo-Qs-AYa">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaS-YW-rhg">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="130"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueCircle" translatesAutoresizingMaskIntoConstraints="NO" id="8Vz-VC-gfG">
+                                    <rect key="frame" x="272" y="0.0" width="121" height="127"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DeliveryMan" translatesAutoresizingMaskIntoConstraints="NO" id="PY2-iT-J88">
+                                    <rect key="frame" x="259" y="22" width="134" height="108"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtT-7R-QhF">
+                                    <rect key="frame" x="20" y="60" width="157.33333333333334" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="CustomRed"/>
+                            <constraints>
+                                <constraint firstItem="QtT-7R-QhF" firstAttribute="width" secondItem="ZaS-YW-rhg" secondAttribute="width" multiplier="0.4" id="CJ5-Ct-SGJ"/>
+                                <constraint firstItem="PY2-iT-J88" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZaS-YW-rhg" secondAttribute="top" id="HuG-4i-73C"/>
+                                <constraint firstAttribute="height" constant="130" id="IsW-6R-o10"/>
+                                <constraint firstAttribute="trailing" secondItem="PY2-iT-J88" secondAttribute="trailing" id="l7w-1z-sTc"/>
+                                <constraint firstItem="8Vz-VC-gfG" firstAttribute="top" secondItem="ZaS-YW-rhg" secondAttribute="top" id="nza-Is-aEm"/>
+                                <constraint firstItem="QtT-7R-QhF" firstAttribute="centerY" secondItem="ZaS-YW-rhg" secondAttribute="centerY" constant="10" id="qQV-ci-hzE"/>
+                                <constraint firstItem="QtT-7R-QhF" firstAttribute="leading" secondItem="ZaS-YW-rhg" secondAttribute="leading" constant="20" id="qfQ-2B-WYX"/>
+                                <constraint firstAttribute="trailing" secondItem="8Vz-VC-gfG" secondAttribute="trailing" id="qhw-1N-RYC"/>
+                                <constraint firstAttribute="bottom" secondItem="PY2-iT-J88" secondAttribute="bottom" id="xet-5l-ohM"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTH-gV-ide">
+                            <rect key="frame" x="86.666666666666686" y="145" width="220" height="36"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UED-I5-WS1" customClass="RoundedSegmentedControl" customModule="Ultimate_Demo" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="37"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="OOZ-xg-gzM"/>
+                                        <constraint firstAttribute="width" constant="220" id="RNR-Mc-qt6"/>
+                                    </constraints>
+                                    <segments>
+                                        <segment title="New"/>
+                                        <segment title="Others"/>
+                                    </segments>
+                                    <color key="selectedSegmentTintColor" name="CustomDarkBlue"/>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="UED-I5-WS1" secondAttribute="bottom" id="42r-pr-W0t"/>
+                                <constraint firstItem="UED-I5-WS1" firstAttribute="centerX" secondItem="DTH-gV-ide" secondAttribute="centerX" id="7cC-Iy-8Tn"/>
+                                <constraint firstItem="UED-I5-WS1" firstAttribute="top" secondItem="DTH-gV-ide" secondAttribute="top" id="ZiW-tc-T4C"/>
+                                <constraint firstItem="UED-I5-WS1" firstAttribute="leading" secondItem="DTH-gV-ide" secondAttribute="leading" id="cnm-SI-JdO"/>
+                                <constraint firstAttribute="trailing" secondItem="UED-I5-WS1" secondAttribute="trailing" id="j13-Of-h3z"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-26-0K0">
+                            <rect key="frame" x="0.0" y="196" width="393" height="656"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="iWI-26-0K0" secondAttribute="trailing" id="90T-t6-qzj"/>
+                        <constraint firstItem="iWI-26-0K0" firstAttribute="leading" secondItem="pRo-Qs-AYa" secondAttribute="leading" id="Blg-2J-n3v"/>
+                        <constraint firstItem="DTH-gV-ide" firstAttribute="top" secondItem="ZaS-YW-rhg" secondAttribute="bottom" constant="15" id="NBb-fD-uC6"/>
+                        <constraint firstItem="iWI-26-0K0" firstAttribute="top" secondItem="DTH-gV-ide" secondAttribute="bottom" constant="15" id="NeC-B7-BKz"/>
+                        <constraint firstItem="ZaS-YW-rhg" firstAttribute="leading" secondItem="pRo-Qs-AYa" secondAttribute="leading" id="Uua-Dt-vjY"/>
+                        <constraint firstItem="ZaS-YW-rhg" firstAttribute="top" secondItem="pRo-Qs-AYa" secondAttribute="top" id="WUD-aj-LMl"/>
+                        <constraint firstItem="DTH-gV-ide" firstAttribute="centerX" secondItem="pRo-Qs-AYa" secondAttribute="centerX" id="r4f-F7-n55"/>
+                        <constraint firstAttribute="bottom" secondItem="iWI-26-0K0" secondAttribute="bottom" id="uIP-tn-ENE"/>
+                        <constraint firstAttribute="trailing" secondItem="ZaS-YW-rhg" secondAttribute="trailing" id="wle-vf-De4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pRo-Qs-AYa" secondAttribute="trailing" id="D4e-ai-uKm"/>
+                <constraint firstItem="pRo-Qs-AYa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Nrt-0e-SfT"/>
+                <constraint firstAttribute="bottom" secondItem="pRo-Qs-AYa" secondAttribute="bottom" id="Vzm-b3-5BR"/>
+                <constraint firstItem="pRo-Qs-AYa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y8i-RK-hj8"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BlueCircle" width="121" height="127"/>
+        <image name="DeliveryMan" width="134" height="108"/>
+        <namedColor name="CustomDarkBlue">
+            <color red="0.0" green="0.31000000238418579" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CustomRed">
+            <color red="0.83099997043609619" green="0.16500000655651093" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
