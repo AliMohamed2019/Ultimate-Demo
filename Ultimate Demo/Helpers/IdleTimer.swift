@@ -15,7 +15,7 @@ class IdleTimer {
     }
     
     private var timer: Timer?
-    private var idleTimeInSeconds: TimeInterval = 5
+    private var idleTimeInSeconds: TimeInterval = 120
     
     /// Start Timer or Continue if already running
     public func startTimer() {
